@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Estimate Cyprus corporate income tax using the 2026 corporation tax rate and common tax adjustments."
+    >
+
+    <title>
+        Cyprus Corporate Tax Calculator | C. Anthouli
+    </title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Main stylesheet -->
+
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
+    <!-- Calculator stylesheet -->
+
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SKIP LINK
+         ===================================================== -->
+
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
+        Skip to content
+    </a>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header
+        class="site-header"
+        id="site-header"
+    >
+
+        <div class="container header-inner">
+
+            <a
+                class="brand"
+                href="../index.html"
+                aria-label="C. Anthouli home"
+            >
+
+                <img
+                    src="../assets/images/logo.png"
+                    alt="C. Anthouli"
+                >
+
+            </a>
+
+
+            <nav
+                class="desktop-nav"
+                aria-label="Primary navigation"
+            >
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../about.html">
+                    About
+                </a>
+
+                <a href="../services.html">
+                    Services
+                </a>
+
+                <a href="../articles.html">
+                    Articles
+                </a>
+
+                <a
+                    href="../calculators.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    Calculators
+                </a>
+
+                <a href="../contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    class="header-whatsapp"
+                    href="https://wa.me/35799572563"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Chat with C. Anthouli on WhatsApp"
+                >
+
+                    <i
+                        data-lucide="message-circle"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        WhatsApp
+                    </span>
+
+                </a>
+
+
+                <a
+                    class="btn btn-primary btn-header"
+                    href="../contact.html"
+                >
+                    Speak to an Advisor
+                </a>
+
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                    aria-label="Open navigation menu"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Mobile menu -->
+
+        <div
+            class="mobile-menu"
+            id="mobile-menu"
+            aria-hidden="true"
+        >
+
+            <nav
+                class="mobile-nav"
+                aria-label="Mobile navigation"
+            >
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../about.html">
+                    About
+                </a>
+
+                <a href="../services.html">
+                    Services
+                </a>
+
+                <a href="../articles.html">
+                    Articles
+                </a>
+
+                <a
+                    href="../calculators.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    Calculators
+                </a>
+
+                <a href="../contact.html">
+                    Contact
+                </a>
+
+
+                <div class="mobile-nav-actions">
+
+                    <a
+                        class="mobile-cta"
+                        href="../contact.html"
+                    >
+
+                        Speak to an Advisor
+
+                        <i
+                            data-lucide="arrow-up-right"
+                            aria-hidden="true"
+                        ></i>
+
+                    </a>
+
+
+                    <a
+                        class="mobile-whatsapp"
+                        href="https://wa.me/35799572563"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i
+                            data-lucide="message-circle"
+                            aria-hidden="true"
+                        ></i>
+
+                        Chat on WhatsApp
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main id="main-content">
+
+
+        <!-- =================================================
+             PAGE HERO
+             ================================================= -->
+
+        <section class="calculator-hero">
+
+            <div class="container calculator-hero-inner">
+
+                <div class="calculator-hero-content reveal">
+
+                    <p class="eyebrow">
+                        CORPORATE TAX CALCULATOR
+                    </p>
+
+
+                    <h1>
+                        Estimate your
+                        <span>
+                            Cyprus corporation tax.
+                        </span>
+                    </h1>
+
+
+                    <p class="calculator-hero-copy">
+
+                        Estimate your company's taxable profit
+                        and corporation tax liability using the
+                        Cyprus tax rules applicable from the
+                        2026 tax year.
+
+                    </p>
+
+
+                    <div class="calculator-hero-meta">
+
+                        <span>
+                            <i
+                                data-lucide="calculator"
+                                aria-hidden="true"
+                            ></i>
+
+                            2026 corporation tax
+                        </span>
+
+
+                        <span>
+                            <i
+                                data-lucide="percent"
+                                aria-hidden="true"
+                            ></i>
+
+                            15% standard rate
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CALCULATOR
+             ================================================= -->
+
+        <section class="section corporate-calculator-section">
+
+            <div class="container">
+
+
+                <div class="calculator-layout">
+
+
+                    <!-- =====================================
+                         INPUT CARD
+                         ===================================== -->
+
+                    <div class="calculator-card calculator-input-card">
+
+                        <div class="calculator-card-header">
+
+                            <div>
+
+                                <p class="eyebrow">
+                                    BUSINESS DETAILS
+                                </p>
+
+                                <h2>
+                                    Build your estimate
+                                </h2>
+
+                            </div>
+
+
+                            <div class="tax-rate-badge">
+
+                                <strong>
+                                    15%
+                                </strong>
+
+                                <span>
+                                    Corporation tax
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <form
+                            id="corporate-tax-form"
+                            novalidate
+                        >
+
+
+                            <!-- Tax year -->
+
+                            <div class="form-section">
+
+                                <div class="form-section-heading">
+
+                                    <span>
+                                        01
+                                    </span>
+
+                                    <div>
+
+                                        <h3>
+                                            Tax year
+                                        </h3>
+
+                                        <p>
+                                            Select the year you want to estimate.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-field">
+
+                                    <label for="tax-year">
+                                        Tax year
+                                    </label>
+
+                                    <select id="tax-year">
+
+                                        <option value="2026" selected>
+                                            2026
+                                        </option>
+
+                                        <option value="2025">
+                                            2025
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Accounting profit -->
+
+                            <div class="form-section">
+
+                                <div class="form-section-heading">
+
+                                    <span>
+                                        02
+                                    </span>
+
+                                    <div>
+
+                                        <h3>
+                                            Accounting profit
+                                        </h3>
+
+                                        <p>
+                                            Enter your company's profit before corporation tax.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-field">
+
+                                    <label for="accounting-profit">
+                                        Profit before tax
+                                    </label>
+
+                                    <div class="currency-input">
+
+                                        <span>
+                                            €
+                                        </span>
+
+                                        <input
+                                            type="number"
+                                            id="accounting-profit"
+                                            min="0"
+                                            step="0.01"
+                                            inputmode="decimal"
+                                            placeholder="100,000"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Tax adjustments -->
+
+                            <div class="form-section">
+
+                                <div class="form-section-heading">
+
+                                    <span>
+                                        03
+                                    </span>
+
+                                    <div>
+
+                                        <h3>
+                                            Tax adjustments
+                                        </h3>
+
+                                        <p>
+                                            Adjust accounting profit to arrive at an estimated taxable profit.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-grid">
+
+
+                                    <!-- Non-deductible expenses -->
+
+                                    <div class="form-field">
+
+                                        <label for="non-deductible">
+
+                                            Non-deductible expenses
+
+                                            <span
+                                                class="field-help"
+                                                title="Expenses recorded in the accounts that are not deductible for corporation tax purposes."
+                                            >
+                                                ?
+                                            </span>
+
+                                        </label>
+
+
+                                        <div class="currency-input">
+
+                                            <span>
+                                                €
+                                            </span>
+
+                                            <input
+                                                type="number"
+                                                id="non-deductible"
+                                                min="0"
+                                                step="0.01"
+                                                inputmode="decimal"
+                                                placeholder="0"
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Exempt income -->
+
+                                    <div class="form-field">
+
+                                        <label for="exempt-income">
+
+                                            Tax-exempt income
+
+                                            <span
+                                                class="field-help"
+                                                title="Income that is exempt from Cyprus corporation tax, where applicable."
+                                            >
+                                                ?
+                                            </span>
+
+                                        </label>
+
+
+                                        <div class="currency-input">
+
+                                            <span>
+                                                €
+                                            </span>
+
+                                            <input
+                                                type="number"
+                                                id="exempt-income"
+                                                min="0"
+                                                step="0.01"
+                                                inputmode="decimal"
+                                                placeholder="0"
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Capital allowances -->
+
+                                    <div class="form-field">
+
+                                        <label for="capital-allowances">
+
+                                            Capital allowances
+
+                                            <span
+                                                class="field-help"
+                                                title="Tax capital allowances available for qualifying assets."
+                                            >
+                                                ?
+                                            </span>
+
+                                        </label>
+
+
+                                        <div class="currency-input">
+
+                                            <span>
+                                                €
+                                            </span>
+
+                                            <input
+                                                type="number"
+                                                id="capital-allowances"
+                                                min="0"
+                                                step="0.01"
+                                                inputmode="decimal"
+                                                placeholder="0"
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- NID -->
+
+                                    <div class="form-field">
+
+                                        <label for="nid">
+
+                                            Notional Interest Deduction
+
+                                            <span
+                                                class="field-help"
+                                                title="Enter the NID deduction amount applicable to your company, if any."
+                                            >
+                                                ?
+                                            </span>
+
+                                        </label>
+
+
+                                        <div class="currency-input">
+
+                                            <span>
+                                                €
+                                            </span>
+
+                                            <input
+                                                type="number"
+                                                id="nid"
+                                                min="0"
+                                                step="0.01"
+                                                inputmode="decimal"
+                                                placeholder="0"
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- Losses -->
+
+                                    <div class="form-field form-field-full">
+
+                                        <label for="tax-losses">
+
+                                            Prior-year tax losses used
+
+                                            <span
+                                                class="field-help"
+                                                title="Enter the amount of eligible tax losses you intend to use against current-year taxable profits."
+                                            >
+                                                ?
+                                            </span>
+
+                                        </label>
+
+
+                                        <div class="currency-input">
+
+                                            <span>
+                                                €
+                                            </span>
+
+                                            <input
+                                                type="number"
+                                                id="tax-losses"
+                                                min="0"
+                                                step="0.01"
+                                                inputmode="decimal"
+                                                placeholder="0"
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Dividend section -->
+
+                            <div class="form-section dividend-section">
+
+                                <div class="form-section-heading">
+
+                                    <span>
+                                        04
+                                    </span>
+
+                                    <div>
+
+                                        <h3>
+                                            Optional dividend estimate
+                                        </h3>
+
+                                        <p>
+                                            Estimate the amount remaining if profits are distributed as dividends.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <label class="toggle-row">
+
+                                    <span>
+
+                                        <strong>
+                                            Include dividend calculation
+                                        </strong>
+
+                                        <small>
+                                            Show an indicative dividend tax estimate.
+                                        </small>
+
+                                    </span>
+
+
+                                    <input
+                                        type="checkbox"
+                                        id="include-dividends"
+                                    >
+
+                                    <span
+                                        class="toggle-switch"
+                                        aria-hidden="true"
+                                    ></span>
+
+                                </label>
+
+
+                                <div
+                                    class="dividend-options"
+                                    id="dividend-options"
+                                    hidden
+                                >
+
+
+                                    <div class="form-field">
+
+                                        <label for="distribution-percentage">
+
+                                            Profit distributed
+
+                                            <span>
+                                                %
+                                            </span>
+
+                                        </label>
+
+
+                                        <div class="percentage-input">
+
+                                            <input
+                                                type="number"
+                                                id="distribution-percentage"
+                                                min="0"
+                                                max="100"
+                                                step="1"
+                                                value="100"
+                                                inputmode="numeric"
+                                            >
+
+                                            <span>
+                                                %
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <label class="toggle-row dividend-toggle">
+
+                                        <span>
+
+                                            <strong>
+                                                Individual shareholder
+                                            </strong>
+
+                                            <small>
+                                                Include indicative 2026 SDC and GHS treatment.
+                                            </small>
+
+                                        </span>
+
+
+                                        <input
+                                            type="checkbox"
+                                            id="individual-shareholder"
+                                        >
+
+                                        <span
+                                            class="toggle-switch"
+                                            aria-hidden="true"
+                                        ></span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Actions -->
+
+                            <div class="calculator-actions">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary calculator-submit"
+                                >
+
+                                    Calculate Tax
+
+                                    <i
+                                        data-lucide="arrow-right"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    class="calculator-reset"
+                                    id="reset-calculator"
+                                >
+
+                                    Reset
+
+                                </button>
+
+                            </div>
+
+
+                            <p
+                                class="calculator-error"
+                                id="calculator-error"
+                                role="alert"
+                                hidden
+                            ></p>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         RESULTS
+                         ===================================== -->
+
+                    <aside
+                        class="calculator-results"
+                        id="calculator-results"
+                        aria-live="polite"
+                    >
+
+                        <div class="results-card">
+
+                            <div class="results-header">
+
+                                <div>
+
+                                    <p class="eyebrow">
+                                        ESTIMATE
+                                    </p>
+
+                                    <h2>
+                                        Your tax position
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="results-year">
+                                    2026
+                                </div>
+
+                            </div>
+
+
+                            <div class="main-result">
+
+                                <span>
+                                    Estimated corporation tax
+                                </span>
+
+                                <strong id="corporation-tax">
+                                    €0.00
+                                </strong>
+
+                                <small id="corporation-rate">
+                                    At 15%
+                                </small>
+
+                            </div>
+
+
+                            <div class="result-list">
+
+
+                                <div class="result-row">
+
+                                    <span>
+                                        Accounting profit
+                                    </span>
+
+                                    <strong id="result-accounting-profit">
+                                        €0.00
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="result-row">
+
+                                    <span>
+                                        Tax adjustments
+                                    </span>
+
+                                    <strong id="result-adjustments">
+                                        €0.00
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="result-row">
+
+                                    <span>
+                                        Taxable profit
+                                    </span>
+
+                                    <strong id="result-taxable-profit">
+                                        €0.00
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="result-row result-row-emphasis">
+
+                                    <span>
+                                        Profit after corporation tax
+                                    </span>
+
+                                    <strong id="result-after-tax">
+                                        €0.00
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Dividend results -->
+
+                            <div
+                                class="dividend-results"
+                                id="dividend-results"
+                                hidden
+                            >
+
+                                <div class="results-divider"></div>
+
+
+                                <h3>
+                                    Indicative dividend estimate
+                                </h3>
+
+
+                                <div class="result-row">
+
+                                    <span>
+                                        Dividend distributed
+                                    </span>
+
+                                    <strong id="result-dividend">
+                                        €0.00
+                                    </strong>
+
+                                </div>
+
+
+                                <div
+                                    class="result-row"
+                                    id="sdc-row"
+                                >
+
+                                    <span>
+                                        SDC
+                                    </span>
+
+                                    <strong id="result-sdc">
+                                        €0.00
+                                    </strong>
+
+                                </div>
+
+
+                                <div
+                                    class="result-row"
+                                    id="ghs-row"
+                                >
+
+                                    <span>
+                                        GHS
+                                    </span>
+
+                                    <strong id="result-ghs">
+                                        €0.00
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="result-row result-row-emphasis">
+
+                                    <span>
+                                        Estimated net dividend
+                                    </span>
+
+                                    <strong id="result-net-dividend">
+                                        €0.00
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="effective-rate">
+
+                                <span>
+                                    Effective tax rate
+                                </span>
+
+                                <strong id="effective-rate">
+                                    0.00%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Disclaimer -->
+
+                        <div class="calculator-note">
+
+                            <i
+                                data-lucide="info"
+                                aria-hidden="true"
+                            ></i>
+
+                            <p>
+
+                                This calculator provides an
+                                indicative estimate only. Actual
+                                taxable profit can depend on the
+                                company's activities, deductions,
+                                exemptions, capital allowances,
+                                losses, related-party transactions
+                                and other provisions.
+
+                            </p>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             HOW IT WORKS
+             ================================================= -->
+
+        <section class="section calculator-explanation">
+
+            <div class="container">
+
+                <div class="explanation-heading">
+
+                    <p class="eyebrow">
+                        HOW IT WORKS
+                    </p>
+
+                    <h2>
+                        From accounting profit
+                        <span>to taxable profit.</span>
+                    </h2>
+
+                    <p>
+                        Corporation tax is generally calculated
+                        from taxable profits rather than simply
+                        applying the tax rate to accounting profit.
+                    </p>
+
+                </div>
+
+
+                <div class="calculation-steps">
+
+
+                    <div class="calculation-step">
+
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Start with accounting profit
+                        </h3>
+
+                        <p>
+                            Begin with the company's profit before
+                            corporation tax as shown in the
+                            accounts.
+                        </p>
+
+                    </div>
+
+
+                    <div class="calculation-step">
+
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Apply tax adjustments
+                        </h3>
+
+                        <p>
+                            Add back non-deductible expenses and
+                            deduct applicable exempt income,
+                            capital allowances and other eligible
+                            deductions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="calculation-step">
+
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Apply the tax rate
+                        </h3>
+
+                        <p>
+                            The resulting estimated taxable profit
+                            is multiplied by the applicable
+                            corporation tax rate.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+             ================================================= -->
+
+        <section class="section section-dark">
+
+            <div class="container">
+
+                <div class="cta-card">
+
+                    <div>
+
+                        <p class="eyebrow eyebrow-light">
+                            NEED A CLOSER LOOK?
+                        </p>
+
+                        <h2>
+                            Your actual tax position may require
+                            more than a calculator.
+                        </h2>
+
+                        <p>
+                            Speak with C. Anthouli about your
+                            company's tax position, compliance
+                            requirements and planning options.
+                        </p>
+
+                    </div>
+
+
+                    <div class="cta-actions">
+
+                        <a
+                            class="btn btn-light"
+                            href="../contact.html"
+                        >
+
+                            Speak to an Advisor
+
+                            <i
+                                data-lucide="arrow-up-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+
+                        <a
+                            class="text-link text-link-light"
+                            href="https://wa.me/35799572563"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <i
+                                data-lucide="message-circle"
+                                aria-hidden="true"
+                            ></i>
+
+                            Chat on WhatsApp
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-main">
+
+
+                <div class="footer-brand">
+
+                    <a
+                        href="../index.html"
+                        class="footer-logo"
+                    >
+
+                        <img
+                            src="../assets/images/logo.png"
+                            alt="C. Anthouli"
+                        >
+
+                    </a>
+
+
+                    <p>
+                        Bespoke assurance, tax advisory and tax
+                        compliance services for national and
+                        international corporations.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Company
+                    </h3>
+
+                    <a href="../about.html">
+                        About
+                    </a>
+
+                    <a href="../services.html">
+                        Services
+                    </a>
+
+                    <a href="../articles.html">
+                        Articles
+                    </a>
+
+                    <a href="../calculators.html">
+                        Calculators
+                    </a>
+
+                    <a href="../contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Services
+                    </h3>
+
+                    <a href="../services.html#assurance">
+                        Assurance
+                    </a>
+
+                    <a href="../services.html#tax-advisory">
+                        Tax Advisory
+                    </a>
+
+                    <a href="../services.html#tax-compliance">
+                        Tax Compliance
+                    </a>
+
+                    <a href="../services.html#accounting">
+                        Accounting & Business Support
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column footer-contact">
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <a href="tel:+35724821177">
+                        +357 24821177
+                    </a>
+
+                    <a
+                        href="https://wa.me/35799572563"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        +357 99572563
+                    </a>
+
+                    <a href="mailto:info@anthouli.com">
+                        info@anthouli.com
+                    </a>
+
+                    <span>
+                        8 Piliou Street, Office 401,
+                        6037 Larnaca, Cyprus
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    ©
+                    <span id="current-year">
+                        2026
+                    </span>
+                    C. Anthouli.
+                    All rights reserved.
+                </p>
+
+
+                <div class="footer-legal">
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms & Disclaimer
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back to top -->
+
+    <button
+        class="back-to-top"
+        id="back-to-top"
+        type="button"
+        aria-label="Back to top"
+    >
+
+        <i
+            data-lucide="arrow-up"
+            aria-hidden="true"
+        ></i>
+
+    </button>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
